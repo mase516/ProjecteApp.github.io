@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LECFantasy</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px; /* Màrge esquerre */
+    margin-right: 100px; /* Màrge dret */
+    background-color: lightgray; /* Color de fons de la pàgina */
+  }
+  
+  #banner {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  #indice {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  #indice a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Fer que els enllaços ocupin tot el seu contenedor */
+    padding: 10px; /* Afegir un espai intern per a millor interacció */
+    transition: background-color 0.3s, border-radius 0.3s; /* Transició suau */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  #indice a:hover {
+    background-color: lightseagreen; /* Fons blanc lleugerament transparent */
+    border-radius: 6px; /* Efecte de sombreado suave */
+  }
+  
+  #contenido {
+    width: calc(100% - 40px); 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  h1, h2, p {
+    margin-left: 20px; /* Ajusta el marge a l'esquerra */
+    margin-right: 20px; /* Ajusta el marge a la dreta */
+  }
+  
+  img {
+    display: block; /* Permet centrar la imatge */
+    margin: 0 auto; /* Centra la imatge */
+    max-width: 100%; /* Assegura que la imatge no superi l'amplada del seu contenidor */
+    height: auto; /* Manté l'altura de la imatge proporció per ajustar-se a l'amplada */
+    margin-bottom: 20px; /* Afegeix un espai entre imatges i text */
+    border-radius: 4px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  </style>
+</head>
+<body>
+    
+<div id="banner">
+    <h1>PROJECTE: LECFantasy</h1>
+    <div id="indice">
+      <a href="Index.html">Inicio</a>
+      <a href="UML.html">UML</a>
+      <a href="Bases de dades.html">Base de dades</a>
+      <a href="Programacio.html">Cronogrames</a>
+      <a href="Funcionament.html">Guia d'ús</a>
+      <a href="Problemes i Solucions.html">Problemes i Solucions</a>
+    </div>
+  </div>
+
+<h2>Problemes</h2>
+<p>Alguns dels problemes que m'he trobat han sigut els següents:
+  <ul>
+    <li> <strong>Carrega de les imatges:</strong> no es carreguen les imatges, suposo que serà per algún problema de versions.</li>
+    <li> <strong>Punts Totals:</strong> tenia pensat mostrar a la taula els punts totals de totes les jornades però a falta de temps i que només em dona mals de cap he decidit prescindir d'aquest valor a la taula</li>
+    <li> <strong>Problema de Versió:</strong> vaig tenir un problema amb les versions i em van tindre que actualitzar el java i el sistema, no entenc perquè va pasar.</li>
+    <li> <strong>Problemes amb els estils:</strong> per alguna raó no em funciona l'arxiu d'estils</li>
+    <li> <strong>Problemes amb el MenuToolBar:</strong> si canvies la vista i tornes a la pàgina principal del MenuToolBar aquest es duplica i així infinitament a no ser que només es fagi servir el primer</li>
+  </ul>
+</p>
+
+<h2>Solucions</h2>
+<ul>
+  <li> No he pogut solucionar el tema de les imatges</li>
+  <li> Em van actualitzar el Java i el sistema i va funcionar</li>
+  <li> He tingut que aplicar els estils mitjançant la interficie gràfica del SceneBuilder, tot i que no he afegit tots els estils que m'hagués agradat</li>
+</ul>
+<h2>Coses que m'hagués agradat afegir</h2>
+<p>M'hagués agradat afegir més estils per a que la app fos més atractiva visualment, a més de una vista per veure els proxims partits, però no he tingut temps a més de que no afegia res per a lo que es tenia que fer al projecte. També m'hagues agradat millorar la vista de "Inici" afegint alguna cosa per a que fos més útil ja que simplement la faig servir per al MenuToolBar.</p>

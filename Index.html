@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LECFantasy</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px; /* Màrge esquerre */
+    margin-right: 100px; /* Màrge dret */
+    background-color: lightgray; /* Color de fons de la pàgina */
+  }
+  
+  #banner {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  #indice {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  #indice a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Fer que els enllaços ocupin tot el seu contenedor */
+    padding: 10px; /* Afegir un espai intern per a millor interacció */
+    transition: background-color 0.3s, border-radius 0.3s; /* Transició suau */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  #indice a:hover {
+    background-color: lightseagreen; /* Fons blanc lleugerament transparent */
+    border-radius: 6px; /* Efecte de sombreado suave */
+  }
+  
+  #contenido {
+    width: calc(100% - 40px); 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  h1, h2, p {
+    margin-left: 20px; /* Ajusta el marge a l'esquerra */
+    margin-right: 20px; /* Ajusta el marge a la dreta */
+  }
+  
+  img {
+    display: block; /* Permet centrar la imatge */
+    margin: 0 auto; /* Centra la imatge */
+    max-width: 100%; /* Assegura que la imatge no superi l'amplada del seu contenidor */
+    height: auto; /* Manté l'altura de la imatge proporció per ajustar-se a l'amplada */
+    margin-bottom: 20px; /* Afegeix un espai entre imatges i text */
+    border-radius: 4px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+</style>
+</head>
+<body>
+    
+<div id="banner">
+    <h1>PROJECTE: LECFantasy</h1>
+    <div id="indice">
+      <a href="Index.html">Inicio</a>
+      <a href="UML.html">UML</a>
+      <a href="Bases de dades.html">Base de dades</a>
+      <a href="Programacio.html">Cronogrames</a>
+      <a href="Funcionament.html">Guia d'ús</a>
+      <a href="Problemes i Solucions.html">Problemes i Solucions</a>
+    </div>
+  </div>
+  
+  <div id="contenido">
+    <h2>Descripció del Projecte</h2>
+    <p>He decidit fer una aplicació orientada a una competició entre usuaris d'aquesta. Es basa en una aplicació de movil que es diu LaLigaFantasy, 
+      en aquesta app tu pots comprar,vendre jugadors de futbol i competir amb els teus amics per veure qui té més punts, els punts es guanyen escollint, en 
+      el cas del futbol, 11 jugadors i depen de com juguin aquella jornada guanyen més o menys punts. Jo he decidit fer el mateix però per a un altre competició com es
+      la lliga profesional de videojocs (LVP), exactament a la LEC (League of Leguends European Championship), la major competició Europea de League of Legends.
+      Hem va semblar sorprenent que ningú ho hagués fet encara i vaig decidir intentar-ho.
+    </p>
+
+    <h2>Context de l'Aplicació</h2>
+    <p>He decidit fer l'app d'això perquè ningú ho havia fet, o al menys no ho he trobat, i es una aplicació que em genera entusiasme per poder desenvolupar</p>
+  
+    <h2>Objectius</h2>
+    <p>Els meus objectius per aquest projecte serien els següents:</p>
+    <ul>
+      <li>Gestió d'Usuaris (Donar d'alta - Inici Sessió - Modificar Usuaris)</li>
+      <li>Gestió de Lligues (Crear - Convidar - Abandonar)</li>
+      <li>Gestió d'Equip (Crear - Esborrar)</li>
+      <li>Gestió d'Administrador (Establir els punts dels Jugadors)</li>
+    </ul>
+  </div>
+
+</body>
+</html>

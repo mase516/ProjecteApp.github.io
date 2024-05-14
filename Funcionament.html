@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LECFantasy</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px; /* Màrge esquerre */
+    margin-right: 100px; /* Màrge dret */
+    background-color: lightgray; /* Color de fons de la pàgina */
+  }
+  
+  #banner {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  #indice {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  #indice a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Fer que els enllaços ocupin tot el seu contenedor */
+    padding: 10px; /* Afegir un espai intern per a millor interacció */
+    transition: background-color 0.3s, border-radius 0.3s; /* Transició suau */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  #indice a:hover {
+    background-color: lightseagreen; /* Fons blanc lleugerament transparent */
+    border-radius: 6px; /* Efecte de sombreado suave */
+  }
+  
+  #contenido {
+    width: calc(100% - 40px); 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  h1, h2, p {
+    margin-left: 20px; /* Ajusta el marge a l'esquerra */
+    margin-right: 20px; /* Ajusta el marge a la dreta */
+  }
+  
+  img {
+    display: block; /* Permet centrar la imatge */
+    margin: 0 auto; /* Centra la imatge */
+    max-width: 100%; /* Assegura que la imatge no superi l'amplada del seu contenidor */
+    height: auto; /* Manté l'altura de la imatge proporció per ajustar-se a l'amplada */
+    margin-bottom: 20px; /* Afegeix un espai entre imatges i text */
+    border-radius: 4px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  </style>
+</head>
+<body>
+    
+<div id="banner">
+    <h1>PROJECTE: LECFantasy</h1>
+    <div id="indice">
+      <a href="Index.html">Inicio</a>
+      <a href="UML.html">UML</a>
+      <a href="Bases de dades.html">Base de dades</a>
+      <a href="Programacio.html">Cronogrames</a>
+      <a href="Funcionament.html">Guia d'ús</a>
+      <a href="Problemes i Solucions.html">Problemes i Solucions</a>
+    </div>
+  </div>
+
+<h1>GUIA D'ÙS</h1>
+
+<h2>1. Pàgina Inici Sessió</h2>
+<img src="Primary.png">
+<p>Com podem veure en la primera pàgina es tracta d'un inici de sessió, per registrar-se cal introduïr les dades als TextFields i després clicar el botó de registrar-se, un cop registrat passara a la segona vista. Per iniciar sessió només cal introduïr les dades als textFields i clicar el botó d'iniciar sessió. Per canviar la contrasenya només caldrà introduïr el nom d'usuari i la nova contrasenya.</p>
+
+<h2>2. Pàgina del menú</h2>
+<img src="Menu.png">
+<p>Un cop iniciada la sessió, o registrat, accedim a la vista amb el menú a dalt on podem escollir canviar a la vista del teu equip, la lliga o en cas de ser admin accedir a la vista per donar punts als jugadors</p>
+
+<h2>3. Pàgina del Equip</h2>
+<img src="Equip.png">
+<p>En aquesta vista podrem formar el nostre equip. Podem veure 5 ComboBox amb les opcions pertinents per a cada Rol, al primers trobarem els jugadors que juguen el rol de TOP, al segons els Jungles, al tercer els MIDs, al quart els ADCs i al últim els Suports. Abaix trobarem dos botons, un per esborrar el teu equip per poder tornar a fer-lo, i el botó per guardar el teu equip a la base de dades. En teoria quan selecciones un jugador es coloca la seva imatge.</p>
+
+<h2>4. Pàgina de la Lliga</h2>
+<img src="Lliga.png">
+<p>En aquesta vista trobarem una taula amb tota la informació de la nostra lliga com els usuaris pertinents d'aquesta,els seus punts de la jornada i els totals. A dalt trobarem un botó amb un TextField per poder unir-nos a la lliga d'un altre usuari. També trobarem un botó per poder crear una lliga i un botó per poder abandonar-la.</p>
+
+<h2>5. Pàgina Admin</h2>
+<img src="Admin.png">
+<p>A aquesta vista només hi pot accedir l'usuari Administrador (Gustavo33), va ser el primer que vaig crear, i des de aqui podem establir els punts dels jugadors per jornada. Seleccionem al ComboBox un equip i introduïm els punts a cada TextField que pertany a cada un dels jugadors del equip sent aquestos TOP,JNG,MID,ADC,SUP.</p>
+
+</body>

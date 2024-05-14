@@ -83,51 +83,63 @@
 
 <img src="Entitat-Relacio.png">
 
+<h2>Disseny Lògic</h2>
+<pre>LLIGA ( Codi, Punts_Totals, Ranking, Data_Jornada, ID )
+	LLIGA. ID clau aliena a USUARIS
+USUARIS ( ID, Nom_Usuari, Contrasenya ) 
+FORMACIÓ ( ID, Punts_Totals, Data,TOP, MID, JNG, ADC, SUP )
+	FORMACIÓ. ID clau aliena a USUARIS
+JUGADORS ( Nom, Equip, Rol, Punts_Jornada ) 
+PERTANY (ID, Nom_Jugador)
+	PERTANY. ID clau aliena a USUARIS
+	PERTANY. Nom_Jugador clau aliena a JUGADORS
+</pre>
+
 <h2>Creació Taules</h2>
 <p>Taula Formació</p>
-<pre>CREATE TABLE `FORMACIÓ` (
-  `ID_F` int(11) NOT NULL,
-  `Nom_Usuari` varchar(25) NOT NULL,
-  `Punts_Totals` int(11) DEFAULT NULL,
-  `TOP` varchar(25) DEFAULT NULL,
-  `MID` varchar(25) DEFAULT NULL,
-  `JNG` varchar(25) DEFAULT NULL,
-  `ADC` varchar(25) DEFAULT NULL,
-  `SUP` varchar(25) DEFAULT NULL,
+<pre>CREATE TABLE FORMACIÓ (
+  ID_F int(11) NOT NULL,
+  Nom_Usuari varchar(25) NOT NULL,
+  Punts_Totals int(11) DEFAULT NULL,
+  TOP varchar(25) DEFAULT NULL,
+  MID varchar(25) DEFAULT NULL,
+  JNG varchar(25) DEFAULT NULL,
+  ADC varchar(25) DEFAULT NULL,
+  SUP varchar(25) DEFAULT NULL,
   PRIMARY KEY (`ID_F`),
-  CONSTRAINT `FORMACIÓ_ibfk_1` FOREIGN KEY (`ID_F`) REFERENCES `USUARIS` (`ID`)
+  FOREIGN KEY (ID_F) REFERENCES USUARIS (ID)
 )</pre>
 
 <p>Taula Jugadors</p>
 <pre>
-  CREATE TABLE `JUGADORS` (
-  `Nom` varchar(25) PRIMARY KEY NOT NULL,
-  `Equip` varchar(25) DEFAULT NULL,
-  `Rol` varchar(10) NOT NULL,
-  `Punts_Jornada` int(11) DEFAULT NULL,
-  `imatge` longblob DEFAULT NULL,
+  CREATE TABLE JUGADORS (
+  Nom varchar(25) PRIMARY KEY NOT NULL,
+  Equip varchar(25) DEFAULT NULL,
+  Rol varchar(10) NOT NULL,
+  Punts_Jornada int(11) DEFAULT NULL,
+  imatge longblob DEFAULT NULL,
 ) 
 </pre>
 
 <p>Taula Lliga</p>
 <pre>
-  CREATE TABLE `LLIGA` (
-    `Codi` int(11) NOT NULL,
-    `Punts_Totals` int(11) DEFAULT NULL,
-    `ID` int(11) NOT NULL,
-    `PuntsJ` int(5) DEFAULT NULL,
-    PRIMARY KEY (`ID`),
-    CONSTRAINT `LLIGA_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `USUARIS` (`ID`)
+  CREATE TABLE LLIGA (
+    Codi int(11) NOT NULL,
+    Punts_Totals int(11) DEFAULT NULL,
+    ID int(11) NOT NULL,
+    PuntsJ int(5) DEFAULT NULL,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (ID) REFERENCES USUARIS (ID)
   )
 </pre>
 
 <p>Taula Usuaris</p>
 <pre>
-  CREATE TABLE `USUARIS` (
-    `ID` int(11) NOT NULL,
-    `Nom_Usuari` varchar(25) NOT NULL,
-    `Contrasenya` varchar(20) NOT NULL,
-    PRIMARY KEY (`ID`)
+  CREATE TABLE USUARIS (
+    ID int(11) NOT NULL,
+    Nom_Usuari varchar(25) NOT NULL,
+    Contrasenya varchar(20) NOT NULL,
+    PRIMARY KEY (ID)
   ) 
 </pre>
 
